@@ -4,6 +4,7 @@ from script_genius import show_script_genius
 from thumbnail_predictor import show_thumbnail_predictor
 from comment_command_center import show_comment_command_center
 from analytics_decoder import show_analytics_decoder
+from channel_analyzer import show_channel_analyzer
 
 def main():
     st.title("AI Agent for YouTubers")
@@ -11,6 +12,7 @@ def main():
 
     st.sidebar.title("Navigation")
     module = st.sidebar.radio("Go to", [
+        "Channel Analyzer",
         "Brainstorm Pro",
         "Script Genius",
         "Thumbnail & Title Predictor",
@@ -18,7 +20,9 @@ def main():
         "Analytics Decoder"
     ])
 
-    if module == "Brainstorm Pro":
+    if module == "Channel Analyzer":
+        show_channel_analyzer()
+    elif module == "Brainstorm Pro":
         show_brainstorm_pro()
     elif module == "Script Genius":
         show_script_genius()
