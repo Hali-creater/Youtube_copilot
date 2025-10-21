@@ -10,6 +10,9 @@ def main():
     st.title("AI Agent for YouTubers")
     st.write("This application provides a suite of tools to help YouTubers create engaging content, analyze performance, and manage their community.")
 
+    st.sidebar.title("Settings")
+    st.session_state.api_key = st.sidebar.text_input("Enter your YouTube API Key:", type="password")
+
     st.sidebar.title("Navigation")
     module = st.sidebar.radio("Go to", [
         "Channel Analyzer",
